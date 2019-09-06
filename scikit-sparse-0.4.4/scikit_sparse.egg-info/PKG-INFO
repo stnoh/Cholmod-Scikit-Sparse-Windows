@@ -1,6 +1,6 @@
 Metadata-Version: 1.2
 Name: scikit-sparse
-Version: 0.4.3
+Version: 0.4.4
 Summary: Scikits sparse matrix package
 Home-page: https://github.com/scikit-sparse/scikit-sparse/
 Maintainer: ('Antony Lee',)

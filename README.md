@@ -52,7 +52,7 @@ Because metis package has many errors when compiling, I removed the metis packag
 
 ### 2.2 Compile Scikit-Sparse
 
-1. Open "PowerShell" and type `cd scikit-sparse-0.4.3`.
+1. Open "PowerShell" and type `cd scikit-sparse-0.4.4`.
 2. Type `python setup.py build` to compile the package. The `setup.py` has been modified to link the headers and libraries.
 3. Type `python setup.py install` to copy the executable code into the Anaconda folders.
 

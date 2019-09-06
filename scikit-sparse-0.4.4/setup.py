@@ -36,7 +36,6 @@ from setuptools import setup, find_packages, Extension
 import versioneer
 
 if __name__ == "__main__":
-
     setup(install_requires = ['numpy', 'scipy'],
           packages = find_packages(),
           package_data = {

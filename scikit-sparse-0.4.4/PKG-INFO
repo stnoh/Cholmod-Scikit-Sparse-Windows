@@ -1,12 +1,11 @@
-Metadata-Version: 1.1
+Metadata-Version: 1.2
 Name: scikit-sparse
-Version: 0.4.3
+Version: 0.4.4
 Summary: Scikits sparse matrix package
 Home-page: https://github.com/scikit-sparse/scikit-sparse/
-Author: Antony Lee
-Author-email: anntzer.lee@gmail.com
+Maintainer: Joscha Reimer
+Maintainer-email: jor@informatik.uni-kiel.de
 License: GPL
-Description-Content-Type: UNKNOWN
 Description: Sparse matrix tools.
         
         This is a home for sparse matrix code in Python that plays well with
