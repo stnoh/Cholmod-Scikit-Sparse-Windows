@@ -41,6 +41,15 @@ if __name__ == "__main__":
           package_data = {
               "": ["test_data/*.mtx.gz"],
               },
+          data_files = [
+            ('sksparse', [
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/libblas.dll'),
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/libgcc_s_sjlj-1.dll'),
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/libgfortran-3.dll'),
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/liblapack.dll'),
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/libquadmath-0.dll'),
+            ] ),
+          ],
           test_suite = "nose.collector",
           name = DISTNAME,
           version = versioneer.get_version(),
@@ -66,10 +75,14 @@ if __name__ == "__main__":
           ext_modules = [
               Extension("sksparse.cholmod", ["sksparse/cholmod.pyx"],
                         include_dirs=[np.get_include(),
+                                      # Include suitesparse headers
+                                      "../suitesparse-metis-for-windows-1.3.1/build/install/include/suitesparse",
                                       sys.prefix + "/include",
                                       # Debian's suitesparse-dev installs to
                                       # /usr/include/suitesparse
                                       "/usr/include/suitesparse"],
-                        library_dirs=[],
-                        libraries=['cholmod'])],
-          )
+                        library_dirs=["../suitesparse-metis-for-windows-1.3.1/build/install/lib64",
+                                      "../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows"],
+                        libraries=['cholmod', 'amd', 'btf', 'camd', 'ccolamd', 'colamd', 'cxsparse',
+                                   'klu', 'ldl', 'spqr', 'suitesparseconfig', 'umfpack', 'libblas', 'liblapack'])],
+    )
