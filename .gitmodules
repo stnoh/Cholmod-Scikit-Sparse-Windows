@@ -1,0 +1,6 @@
+[submodule "suitesparse-metis-for-windows"]
+	path = suitesparse-metis-for-windows
+	url = https://github.com/jlblancoc/suitesparse-metis-for-windows
+[submodule "scikit-sparse"]
+	path = scikit-sparse
+	url = https://github.com/scikit-sparse/scikit-sparse
