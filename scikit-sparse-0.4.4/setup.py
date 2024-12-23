@@ -74,6 +74,13 @@ if __name__ == "__main__":
           # library_dirs and include_dirs keywords in the lines below.
           ext_modules = [
               Extension("sksparse.cholmod", ["sksparse/cholmod.pyx"],
+                        # include_dirs=[np.get_include(),
+                        #               sys.prefix + "/include",
+                        #               # Debian's suitesparse-dev installs to
+                        #               # /usr/include/suitesparse
+                        #               "/usr/include/suitesparse"],
+                        # library_dirs=[],
+                        # libraries=['cholmod'])],
                         include_dirs=[np.get_include(),
                                       # Include suitesparse headers
                                       "../suitesparse-metis-for-windows-1.3.1/build/install/include/suitesparse",
@@ -85,4 +92,4 @@ if __name__ == "__main__":
                                       "../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows"],
                         libraries=['cholmod', 'amd', 'btf', 'camd', 'ccolamd', 'colamd', 'cxsparse',
                                    'klu', 'ldl', 'spqr', 'suitesparseconfig', 'umfpack', 'libblas', 'liblapack'])],
-    )
+          )

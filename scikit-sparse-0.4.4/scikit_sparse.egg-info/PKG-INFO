@@ -1,4 +1,4 @@
-Metadata-Version: 1.2
+Metadata-Version: 2.1
 Name: scikit-sparse
 Version: 0.4.4
 Summary: Scikits sparse matrix package
@@ -6,16 +6,6 @@ Home-page: https://github.com/scikit-sparse/scikit-sparse/
 Maintainer: ('Antony Lee',)
 Maintainer-email: ('anntzer.lee@gmail.com',)
 License: GPL
-Description: Sparse matrix tools.
-        
-        This is a home for sparse matrix code in Python that plays well with
-        scipy.sparse, but that is somehow unsuitable for inclusion in scipy
-        proper. Usually this will be because it is released under the GPL.
-        
-        So far we have a wrapper for the CHOLMOD library for sparse Cholesky
-        decomposition. Further contributions are welcome!
-        
-Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
 Classifier: Environment :: Console
 Classifier: Intended Audience :: Developers
@@ -24,3 +14,15 @@ Classifier: License :: OSI Approved :: BSD License
 Classifier: Programming Language :: Cython
 Classifier: Topic :: Scientific/Engineering
 Classifier: Topic :: Scientific/Engineering :: Mathematics
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+Sparse matrix tools.
+
+This is a home for sparse matrix code in Python that plays well with
+scipy.sparse, but that is somehow unsuitable for inclusion in scipy
+proper. Usually this will be because it is released under the GPL.
+
+So far we have a wrapper for the CHOLMOD library for sparse Cholesky
+decomposition. Further contributions are welcome!
